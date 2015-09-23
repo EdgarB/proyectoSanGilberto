@@ -5,21 +5,59 @@ public class spawnObjects : MonoBehaviour
 {
 
     public Transform pos;
-    public GameObject prefab;
+    public GameObject objMalo, objBueno;
 
-    public Sprite[] sprites;
-    private SpriteRenderer spriteR;
+    //public Sprite[] sprites;
+    //private SpriteRenderer spriteR;
 
     // Use this for initialization
     void Start()
     {
-        spriteR = prefab.GetComponent<SpriteRenderer>();
+        //spriteR = prefab.GetComponent<SpriteRenderer>();
         InvokeRepeating("SpawnObjects", 1, 1f);
     }
 
     void SpawnObjects()
     {
-        int num = (int)Mathf.Floor(Random.Range(1, 6));
+        int iCont = 0;
+
+
+        if ((int)Mathf.Floor(Random.Range(0,2)) == 1) //Linea 1
+        {
+            int num = (int)Mathf.Floor(Random.Range(0, 15));
+
+            if(num > 3)
+                Instantiate(objMalo, new Vector3(pos.position.x, pos.position.y + 1.0f, pos.position.z), pos.rotation);
+            else
+                Instantiate(objBueno, new Vector3(pos.position.x, pos.position.y + 1.0f, pos.position.z), pos.rotation);
+
+            iCont++;
+        }
+        
+        if((int)Mathf.Floor(Random.Range(0, 2)) == 1) //Linea 2
+        {
+            int num = (int)Mathf.Floor(Random.Range(0, 15));
+
+            if (num > 3)
+                Instantiate(objMalo, new Vector3(pos.position.x, pos.position.y, pos.position.z), pos.rotation);
+            else
+                Instantiate(objBueno, new Vector3(pos.position.x, pos.position.y, pos.position.z), pos.rotation);
+            iCont++;
+        }
+
+        if (iCont < 2 && (int)Mathf.Floor(Random.Range(0, 2)) == 1) //Linea 3
+        {
+            int num = (int)Mathf.Floor(Random.Range(0, 15));
+
+            if (num > 3)
+                Instantiate(objMalo, new Vector3(pos.position.x, pos.position.y - 1.0f, pos.position.z), pos.rotation);
+            else
+                Instantiate(objBueno, new Vector3(pos.position.x, pos.position.y - 1.0f, pos.position.z), pos.rotation);
+        }
+
+
+
+        /*
         switch (num)
         {
             case 1:
@@ -103,5 +141,6 @@ public class spawnObjects : MonoBehaviour
             default:
                 break;
         }
+        */
     }
 }

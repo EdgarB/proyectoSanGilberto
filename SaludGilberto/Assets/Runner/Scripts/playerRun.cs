@@ -103,4 +103,17 @@ public class playerRun : MonoBehaviour {
         return vReturn;
     }
 
+    void OnTriggerEnter2D(Collider2D cOther)
+    {
+        if(cOther.gameObject.tag == "Bueno")
+        {
+            Debug.Log("Aumenta vida");
+        }else
+        {
+
+            Debug.Log("game over");
+        }
+
+    }
+
 }
