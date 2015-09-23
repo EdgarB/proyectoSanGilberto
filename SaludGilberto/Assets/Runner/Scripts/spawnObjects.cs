@@ -25,21 +25,30 @@ public class spawnObjects : MonoBehaviour
             case 1:
                 {
                     int num2 = (int)Mathf.Floor(Random.Range(0, 15));
-                    spriteR.sprite = sprites[num2 % (sprites.Length - 1)];
+                    if (num2 > 4)
+                        spriteR.sprite = sprites[4];
+                    else
+                        spriteR.sprite = sprites[num2 % (sprites.Length - 1)];
                     Instantiate(prefab, pos.position, pos.rotation);
                     break;
                 }
             case 2:
                 {
                     int num2 = (int)Mathf.Floor(Random.Range(0, 15));
-                    spriteR.sprite = sprites[num2 % (sprites.Length - 1)];
+                    if (num2 > 4)
+                        spriteR.sprite = sprites[4];
+                    else
+                        spriteR.sprite = sprites[num2 % (sprites.Length - 1)];
                     Instantiate(prefab, new Vector3(pos.position.x, pos.position.y + 1f), pos.rotation);
                     break;
                 }
             case 3:
                 {
                     int num2 = (int)Mathf.Floor(Random.Range(0, 15));
-                    spriteR.sprite = sprites[num2 % (sprites.Length - 1)];
+                    if (num2 > 4)
+                        spriteR.sprite = sprites[4];
+                    else
+                        spriteR.sprite = sprites[num2 % (sprites.Length - 1)];
                     Instantiate(prefab, new Vector3(pos.position.x, pos.position.y - 1f), pos.rotation);
                     break;
                 }
@@ -47,7 +56,10 @@ public class spawnObjects : MonoBehaviour
                 {
                     int num2 = (int)Mathf.Floor(Random.Range(0, 15));
                     int num3 = (int)Mathf.Floor(Random.Range(0, 15));
-                    spriteR.sprite = sprites[num2 % (sprites.Length - 1)];
+                    if (num2 > 4)
+                        spriteR.sprite = sprites[4];
+                    else
+                        spriteR.sprite = sprites[num2 % (sprites.Length - 1)];
                     Instantiate(prefab, new Vector3(pos.position.x, pos.position.y + 1f), pos.rotation);
                     if (num3 > 4)
                         spriteR.sprite = sprites[4];
@@ -60,7 +72,10 @@ public class spawnObjects : MonoBehaviour
                 {
                     int num2 = (int)Mathf.Floor(Random.Range(0, 15));
                     int num3 = (int)Mathf.Floor(Random.Range(0, 15));
-                    spriteR.sprite = sprites[num2 % (sprites.Length - 1)];
+                    if (num2 > 4)
+                        spriteR.sprite = sprites[4];
+                    else
+                        spriteR.sprite = sprites[num2 % (sprites.Length - 1)];
                     Instantiate(prefab, pos.position, pos.rotation);
                     if (num3 > 4)
                         spriteR.sprite = sprites[4];
@@ -73,7 +88,10 @@ public class spawnObjects : MonoBehaviour
                 {
                     int num2 = (int)Mathf.Floor(Random.Range(0, 15));
                     int num3 = (int)Mathf.Floor(Random.Range(0, 15));
-                    spriteR.sprite = sprites[num2 % (sprites.Length - 1)];
+                    if (num2 > 4)
+                        spriteR.sprite = sprites[4];
+                    else
+                        spriteR.sprite = sprites[num2 % (sprites.Length - 1)];
                     Instantiate(prefab, pos.position, pos.rotation);
                     if (num3 > 4)
                         spriteR.sprite = sprites[4];
