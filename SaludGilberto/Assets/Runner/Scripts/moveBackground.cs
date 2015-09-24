@@ -8,9 +8,16 @@ public class moveBackground : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         if (this.tag == "Background")
+        {
             speed = -0.006f;
-        else
+            this.transform.Translate(Vector3.right * speed);
+        }
+            
+        else if (this.tag == "Floor")
+        {
             speed = -0.06f;
-        this.transform.Translate(Vector3.right * speed);
+            this.transform.Translate(Vector3.right * speed);
+        }
+            
 	}
 }
