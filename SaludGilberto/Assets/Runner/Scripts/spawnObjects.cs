@@ -6,7 +6,7 @@ public class spawnObjects : MonoBehaviour
 
     public Transform pos;
     public GameObject objMalo, objBueno;
-
+    public int iBuenos = 5;
     //public Sprite[] sprites;
     //private SpriteRenderer spriteR;
 
@@ -14,19 +14,20 @@ public class spawnObjects : MonoBehaviour
     void Start()
     {
         //spriteR = prefab.GetComponent<SpriteRenderer>();
-        InvokeRepeating("SpawnObjects", 1, 1f);
+        InvokeRepeating("SpawnObjects", 0, 1f);
     }
 
     void SpawnObjects()
     {
         int iCont = 0;
-
+        bool bSpawned = false;
 
         if ((int)Mathf.Floor(Random.Range(0,2)) == 1) //Linea 1
         {
+            bSpawned = true;
             int num = (int)Mathf.Floor(Random.Range(0, 15));
 
-            if(num > 3)
+            if(num > iBuenos)
                 Instantiate(objMalo, new Vector3(pos.position.x, pos.position.y + 1.0f, pos.position.z), pos.rotation);
             else
                 Instantiate(objBueno, new Vector3(pos.position.x, pos.position.y + 1.0f, pos.position.z), pos.rotation);
@@ -36,9 +37,10 @@ public class spawnObjects : MonoBehaviour
         
         if((int)Mathf.Floor(Random.Range(0, 2)) == 1) //Linea 2
         {
+            bSpawned = true;
             int num = (int)Mathf.Floor(Random.Range(0, 15));
 
-            if (num > 3)
+            if (num > iBuenos)
                 Instantiate(objMalo, new Vector3(pos.position.x, pos.position.y, pos.position.z), pos.rotation);
             else
                 Instantiate(objBueno, new Vector3(pos.position.x, pos.position.y, pos.position.z), pos.rotation);
@@ -47,15 +49,47 @@ public class spawnObjects : MonoBehaviour
 
         if (iCont < 2 && (int)Mathf.Floor(Random.Range(0, 2)) == 1) //Linea 3
         {
+            bSpawned = true;
             int num = (int)Mathf.Floor(Random.Range(0, 15));
 
-            if (num > 3)
+            if (num > iBuenos)
                 Instantiate(objMalo, new Vector3(pos.position.x, pos.position.y - 1.0f, pos.position.z), pos.rotation);
             else
                 Instantiate(objBueno, new Vector3(pos.position.x, pos.position.y - 1.0f, pos.position.z), pos.rotation);
         }
 
+        if(!bSpawned)
+        {
 
+            int num = (int)Mathf.Floor(Random.Range(0, 15));
+            if (num > iBuenos)
+            {
+                int iNum2 = (int)Mathf.Floor(Random.Range(1, 4));
+                if(iNum2 == 1)
+                    Instantiate(objMalo, new Vector3(pos.position.x, pos.position.y - 1.0f, pos.position.z), pos.rotation);
+                else if(iNum2 == 2)
+                    Instantiate(objMalo, new Vector3(pos.position.x, pos.position.y, pos.position.z), pos.rotation);
+                else
+                    Instantiate(objMalo, new Vector3(pos.position.x, pos.position.y + 1.0f, pos.position.z), pos.rotation);
+
+            }
+            else
+            {
+                int iNum2 = (int)Mathf.Floor(Random.Range(1, 4));
+                if (iNum2 == 1)
+                    Instantiate(objBueno, new Vector3(pos.position.x, pos.position.y - 1.0f, pos.position.z), pos.rotation);
+                else if (iNum2 == 2)
+                    Instantiate(objBueno, new Vector3(pos.position.x, pos.position.y, pos.position.z), pos.rotation);
+                else
+                    Instantiate(objBueno, new Vector3(pos.position.x, pos.position.y + 1.0f, pos.position.z), pos.rotation);
+            }
+            
+                
+        }
+
+
+          
+           
 
         /*
         switch (num)
