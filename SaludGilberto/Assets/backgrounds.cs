@@ -10,7 +10,7 @@ public class backgrounds : MonoBehaviour {
     void Start()
     {
         InvokeRepeating("move", 42.5f, 42.5f);
-        InvokeRepeating("moveFloor", 6, 6);
+        InvokeRepeating("moveFloor", 5.5f, 5.5f);
     }
 
     void move()
@@ -23,7 +23,7 @@ public class backgrounds : MonoBehaviour {
     void moveFloor()
     {
         num2 = num2 % 2;
-        arrFloor[num2].transform.position = new Vector2(17.9f, 2.84f);
+        arrFloor[num2].transform.position = new Vector2(13.5f, 2.84f);
         num2++;
     }
 }
