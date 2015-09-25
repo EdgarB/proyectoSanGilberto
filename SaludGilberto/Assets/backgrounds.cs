@@ -31,7 +31,6 @@ public class backgrounds : MonoBehaviour {
             num2 = num2 % 2;
         arrFloor[num2].transform.position = new Vector2(13f, 2.84f);
         num2++;
-        }
-        
+        } 
     }
 }

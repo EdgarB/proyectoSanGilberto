@@ -15,7 +15,7 @@ public class moveBackground : MonoBehaviour {
                 this.transform.Translate(Vector3.right * speed);
             }
 
-            else if (this.tag == "Floor")
+            else if (this.tag == "Floor" || this.tag == "PlayerDead")
             {
                 speed = -0.06f;
                 this.transform.Translate(Vector3.right * speed);

@@ -7,5 +7,7 @@ public class Destroy : MonoBehaviour {
     {
         if (other.tag == "Bueno" || other.tag == "Malo")
             Destroy(other.gameObject);
+        else if (other.tag == "PlayerDead")
+            Application.LoadLevel("HighScore");
     }
 }

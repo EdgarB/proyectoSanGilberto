@@ -11,7 +11,7 @@ public class lifeManager : MonoBehaviour {
     private Animator anim;
     public GameObject playerSprite;
     public GameObject goPlayer;
-    private bool hasDied;
+    public static bool hasDied;
 	void Awake()
     {
         fExtraSeconds = 0.0f;
@@ -40,9 +40,9 @@ public class lifeManager : MonoBehaviour {
             if (fFill==0 && !hasDied)
             {
                 anim.SetTrigger("Dies");
-                playerSprite.GetComponent<BoxCollider2D>().enabled = false;
+                //playerSprite.GetComponent<BoxCollider2D>().enabled = false;
                 hasDied = true;
-                goPlayer.tag = "Floor";
+                goPlayer.tag = "PlayerDead";
                 goPlayer.GetComponent<playerRun>().enabled = false;
             }
 

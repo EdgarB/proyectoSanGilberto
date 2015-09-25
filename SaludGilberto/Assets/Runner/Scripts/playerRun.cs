@@ -141,7 +141,7 @@ public class playerRun : MonoBehaviour {
             gLifeManagerBar.GetComponent<lifeManager>().addOrRestToLife(2);
             Destroy(cOther.gameObject);
             //Debug.Log("Aumenta vida");
-        }else
+        }else if (cOther.gameObject.tag == "Malo")
         {
             gLifeManagerBar.GetComponent<lifeManager>().addOrRestToLife(-2);
             Destroy(cOther.gameObject);

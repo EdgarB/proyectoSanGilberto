@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class scoreManager : MonoBehaviour {
-    private float fScore;
+    public static float fScore;
     void Awake()
     {
         fScore = 0;
@@ -11,10 +11,12 @@ public class scoreManager : MonoBehaviour {
 
     void Update()
     {
-        fScore += Time.deltaTime;
-        float fScoreToShow = Mathf.Floor(fScore);
-        GetComponent<Text>().text = ((int)fScoreToShow).ToString();
-
+        if (!lifeManager.hasDied)
+        {
+            fScore += Time.deltaTime;
+            float fScoreToShow = Mathf.Floor(fScore);
+            GetComponent<Text>().text = ((int)fScoreToShow).ToString();
+        }
     }
 
 
