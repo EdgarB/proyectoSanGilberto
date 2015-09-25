@@ -33,4 +33,9 @@ public class UIManager : MonoBehaviour {
         Application.LoadLevel(0);
     }
 
+    public void GoToSceneNamed(string sNameScene)
+    {
+        Application.LoadLevel(sNameScene);
+    }
+
 }
