@@ -22,4 +22,15 @@ public class UIManager : MonoBehaviour {
         Time.timeScale = 1;
     }
 
+    public void Play()
+    {
+        Time.timeScale = 1;
+        Application.LoadLevel(1);
+    }
+
+    public void Quit()
+    {
+        Application.LoadLevel(0);
+    }
+
 }

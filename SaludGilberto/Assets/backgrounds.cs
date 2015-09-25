@@ -9,7 +9,7 @@ public class backgrounds : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        InvokeRepeating("move", 42.5f, 42.5f);
+        InvokeRepeating("move", 41f, 41f);
         InvokeRepeating("moveFloor", 5.5f, 5.5f);
     }
 
@@ -18,7 +18,8 @@ public class backgrounds : MonoBehaviour {
         if (Time.timeScale>0)
         {
             num = num % 2;
-            arrBackgrounds[num].transform.position = new Vector2(11.19f, -1.39f);
+            arrBackgrounds[num].transform.position = new Vector2(10.03f, -1.39f);
+            Debug.Log(arrBackgrounds[num].transform.position.x);
             num++;
         }
     }
@@ -28,8 +29,9 @@ public class backgrounds : MonoBehaviour {
         if (Time.timeScale>0)
         {
             num2 = num2 % 2;
-            arrFloor[num2].transform.position = new Vector2(13.5f, 2.84f);
-            num2++;
+        arrFloor[num2].transform.position = new Vector2(13f, 2.84f);
+        num2++;
         }
+        
     }
 }
