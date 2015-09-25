@@ -10,7 +10,7 @@ public class backgrounds : MonoBehaviour {
     void Start()
     {
         InvokeRepeating("move", 41f, 41f);
-        InvokeRepeating("moveFloor", 5.5f, 5.5f);
+        InvokeRepeating("moveFloor", 5.3f, 5.3f);
     }
 
     void move()

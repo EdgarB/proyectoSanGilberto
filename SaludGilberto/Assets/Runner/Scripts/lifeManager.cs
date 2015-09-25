@@ -8,12 +8,17 @@ public class lifeManager : MonoBehaviour {
     private float fFill;
     private float fRealScondsSinceLoad;
     private float fExtraSeconds;
+    private Animator anim;
+    public GameObject playerSprite;
+    public GameObject goPlayer;
+    private bool hasDied;
 	void Awake()
     {
         fExtraSeconds = 0.0f;
         fRealScondsSinceLoad = Time.time;
         fFill = 1;
-
+        anim = playerSprite.GetComponent<Animator>();
+        hasDied = false;
     }
     
 	// Update is called once per frame
@@ -31,6 +36,16 @@ public class lifeManager : MonoBehaviour {
 
                 GetComponent<Image>().fillAmount = fFill;
             }
+
+            if (fFill==0 && !hasDied)
+            {
+                anim.SetTrigger("Dies");
+                playerSprite.GetComponent<BoxCollider2D>().enabled = false;
+                hasDied = true;
+                goPlayer.tag = "Floor";
+                goPlayer.GetComponent<playerRun>().enabled = false;
+            }
+
         }  
 	}
 
