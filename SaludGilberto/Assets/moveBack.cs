@@ -4,7 +4,8 @@ using System.Collections;
 public class moveBack : MonoBehaviour {
 	
 	// Update is called once per frame
-	void Update () {
-        this.transform.Translate(Vector3.right * -5 * Time.deltaTime);
+	void FixedUpdate () {
+        if(Time.timeScale > 0)
+            this.transform.Translate(Vector3.right * -.06f);
 	}
 }

@@ -9,16 +9,16 @@ public class backgrounds : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        InvokeRepeating("move", 41f, 41f);
-        InvokeRepeating("moveFloor", 5.3f, 5.3f);
+        InvokeRepeating("move", 44f, 44f);
+        InvokeRepeating("moveFloor", 6.3f, 6.3f);
     }
 
     void move()
     {
         if (Time.timeScale>0)
         {
-            num = num % 2;
-            arrBackgrounds[num].transform.position = new Vector2(10.03f, -1.39f);
+            num = num % arrBackgrounds.Length;
+            arrBackgrounds[num].transform.position = new Vector2(24.36f, -1.39f);
             Debug.Log(arrBackgrounds[num].transform.position.x);
             num++;
         }
@@ -28,8 +28,8 @@ public class backgrounds : MonoBehaviour {
     {
         if (Time.timeScale>0)
         {
-            num2 = num2 % 2;
-        arrFloor[num2].transform.position = new Vector2(13f, 2.84f);
+            num2 = num2 % arrFloor.Length;
+        arrFloor[num2].transform.position = new Vector2(37f, 2.84f); //13
         num2++;
         } 
     }

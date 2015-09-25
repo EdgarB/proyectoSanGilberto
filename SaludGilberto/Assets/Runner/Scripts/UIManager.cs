@@ -25,7 +25,7 @@ public class UIManager : MonoBehaviour {
     public void Play()
     {
         Time.timeScale = 1;
-        Application.LoadLevel(1);
+        Application.LoadLevel("main");
     }
 
     public void Quit()

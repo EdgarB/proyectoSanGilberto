@@ -1,0 +1,96 @@
+Mono path[0] = 'C:/Users/Edgar/Documents/Unity Projects/SaludGilbertoRencarnacion/Builds/SaludGilberto_v2_Data/Managed'
+Mono path[1] = 'C:/Users/Edgar/Documents/Unity Projects/SaludGilbertoRencarnacion/Builds/SaludGilberto_v2_Data/Mono'
+Mono config path = 'C:/Users/Edgar/Documents/Unity Projects/SaludGilbertoRencarnacion/Builds/SaludGilberto_v2_Data/Mono/etc'
+PlayerConnection initialized from C:/Users/Edgar/Documents/Unity Projects/SaludGilbertoRencarnacion/Builds/SaludGilberto_v2_Data (debug = 0)
+PlayerConnection initialized network socket : 0.0.0.0 55444
+Multi-casting "[IP] 192.168.56.1 [Port] 55444 [Flags] 2 [Guid] 2041623772 [EditorId] 3718974686 [Version] 1048832 [Id] WindowsPlayer(Dell) [Debug] 0" to [225.0.0.222:54997]...
+PlayerConnection already initialized - listening to [192.168.56.1:55444]
+Initialize engine version: 5.2.0f3 (e7947df39b5c)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: Intel(R) HD Graphics 4000 (ID=0x166)
+    Vendor:   Intel
+    VRAM:     128 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Edgar\Documents\Unity Projects\SaludGilbertoRencarnacion\Builds\SaludGilberto_v2_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Edgar\Documents\Unity Projects\SaludGilbertoRencarnacion\Builds\SaludGilberto_v2_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Edgar\Documents\Unity Projects\SaludGilbertoRencarnacion\Builds\SaludGilberto_v2_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Edgar\Documents\Unity Projects\SaludGilbertoRencarnacion\Builds\SaludGilberto_v2_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Edgar\Documents\Unity Projects\SaludGilbertoRencarnacion\Builds\SaludGilberto_v2_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Edgar\Documents\Unity Projects\SaludGilbertoRencarnacion\Builds\SaludGilberto_v2_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Edgar\Documents\Unity Projects\SaludGilbertoRencarnacion\Builds\SaludGilberto_v2_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Edgar\Documents\Unity Projects\SaludGilbertoRencarnacion\Builds\SaludGilberto_v2_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\Edgar\Documents\Unity Projects\SaludGilbertoRencarnacion\Builds\SaludGilberto_v2_Data\Managed\System.Core.dll (this message is harmless)
+- Completed reload, in  0.607 seconds
+desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+Platform assembly: C:\Users\Edgar\Documents\Unity Projects\SaludGilbertoRencarnacion\Builds\SaludGilberto_v2_Data\Managed\System.dll (this message is harmless)
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 1cfc -> priority: 1 
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 15.636245 ms
+System memory in use before: 18.0 MB.
+System memory in use after: 18.0 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 180.
+Total: 0.604709 ms (FindLiveObjects: 0.035305 ms CreateObjectMapping: 0.077179 ms MarkObjects: 0.456508 ms  DeleteObjects: 0.029147 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.058755 ms
+System memory in use before: 18.2 MB.
+System memory in use after: 18.2 MB.
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 417.
+Total: 0.858006 ms (FindLiveObjects: 0.063221 ms CreateObjectMapping: 0.052547 ms MarkObjects: 0.701184 ms  DeleteObjects: 0.034484 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 6.059414 ms
+System memory in use before: 18.2 MB.
+System memory in use after: 18.2 MB.
+
+Unloading 66 unused Assets to reduce memory usage. Loaded Objects now: 215.
+Total: 0.890848 ms (FindLiveObjects: 0.048853 ms CreateObjectMapping: 0.038589 ms MarkObjects: 0.557088 ms  DeleteObjects: 0.229075 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 4.784309 ms
+System memory in use before: 21.6 MB.
+System memory in use after: 18.1 MB.
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 192.
+Total: 0.828037 ms (FindLiveObjects: 0.063221 ms CreateObjectMapping: 0.030379 ms MarkObjects: 0.693794 ms  DeleteObjects: 0.034073 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.994351 ms
+System memory in use before: 18.1 MB.
+System memory in use after: 18.1 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 190.
+Total: 0.663415 ms (FindLiveObjects: 0.033252 ms CreateObjectMapping: 0.060347 ms MarkObjects: 0.531225 ms  DeleteObjects: 0.031200 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.962741 ms
+System memory in use before: 32.4 MB.
+System memory in use after: 32.5 MB.
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 417.
+Total: 0.946270 ms (FindLiveObjects: 0.068968 ms CreateObjectMapping: 0.055421 ms MarkObjects: 0.771384 ms  DeleteObjects: 0.043926 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 6.474048 ms
+System memory in use before: 18.2 MB.
+System memory in use after: 18.2 MB.
+
+Unloading 66 unused Assets to reduce memory usage. Loaded Objects now: 215.
+Total: 0.860880 ms (FindLiveObjects: 0.039000 ms CreateObjectMapping: 0.036537 ms MarkObjects: 0.558730 ms  DeleteObjects: 0.221685 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.843277 ms
+System memory in use before: 21.7 MB.
+System memory in use after: 21.7 MB.
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 192.
+Total: 0.761532 ms (FindLiveObjects: 0.057474 ms CreateObjectMapping: 0.027094 ms MarkObjects: 0.617846 ms  DeleteObjects: 0.051726 ms)
+
