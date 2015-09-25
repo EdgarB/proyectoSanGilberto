@@ -25,76 +25,79 @@ public class playerRun : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        //DEFINE LINE
-        //this.transform.Translate(Vector3.right * speed * Time.deltaTime);
-        if (Input.GetKeyDown(KeyCode.UpArrow) && !bMoving)
+        if (Time.timeScale>0)
         {
-            if (down)
+            //DEFINE LINE
+            //this.transform.Translate(Vector3.right * speed * Time.deltaTime);
+            if (Input.GetKeyDown(KeyCode.UpArrow) && !bMoving)
             {
-                down = up = false;
-                middle = true;
-                vPosGoal = transform.position + Vector3.up;
-                bDir = true;
-                fDistance = Vector3.Distance(transform.position, vPosGoal);
-                //this.transform.position += Vector3.up;
-            } 
-            else if (middle)
-            {
-                down = middle = false;
-                up = true;
-                vPosGoal = transform.position + Vector3.up;
-                bDir = true;
-                fDistance = Vector3.Distance(transform.position, vPosGoal);
-                //this.transform.position += Vector3.up;
+                if (down)
+                {
+                    down = up = false;
+                    middle = true;
+                    vPosGoal = transform.position + Vector3.up;
+                    bDir = true;
+                    fDistance = Vector3.Distance(transform.position, vPosGoal);
+                    //this.transform.position += Vector3.up;
+                }
+                else if (middle)
+                {
+                    down = middle = false;
+                    up = true;
+                    vPosGoal = transform.position + Vector3.up;
+                    bDir = true;
+                    fDistance = Vector3.Distance(transform.position, vPosGoal);
+                    //this.transform.position += Vector3.up;
+                }
             }
-        }
-        else if (Input.GetKeyDown(KeyCode.DownArrow) && !bMoving)
-        {
+            else if (Input.GetKeyDown(KeyCode.DownArrow) && !bMoving)
+            {
+                if (up)
+                {
+                    up = down = false;
+                    middle = true;
+                    vPosGoal = transform.position - Vector3.up;
+                    bDir = false;
+                    fDistance = Vector3.Distance(transform.position, vPosGoal);
+                    //this.transform.position -= Vector3.up;
+                }
+                else if (middle)
+                {
+                    middle = up = false;
+                    down = true;
+                    vPosGoal = transform.position - Vector3.up;
+                    bDir = false;
+                    fDistance = Vector3.Distance(transform.position, vPosGoal);
+                    //this.transform.position -= Vector3.up;
+                }
+            }
+
+
+            //MOVE TO LINE
             if (up)
             {
-                up = down = false;
-                middle = true;
-                vPosGoal = transform.position - Vector3.up;
-                bDir = false;
-                fDistance = Vector3.Distance(transform.position, vPosGoal);
-                //this.transform.position -= Vector3.up;
+                transform.position = vMoveFromTo(transform.position, vPosGoal, speed, percentage, bDir, fDistance);
+
             }
             else if (middle)
             {
-                middle = up = false;
-                down = true;
-                vPosGoal = transform.position - Vector3.up;
-                bDir = false;
-                fDistance = Vector3.Distance(transform.position, vPosGoal);
-                //this.transform.position -= Vector3.up;
+                transform.position = vMoveFromTo(transform.position, vPosGoal, speed, percentage, bDir, fDistance);
+            }
+            else if (down)
+            {
+                transform.position = vMoveFromTo(transform.position, vPosGoal, speed, percentage, bDir, fDistance);
+            }
+
+            //Check if it is at the goal position
+            if (transform.position == vPosGoal)
+            {
+                bMoving = false;
+            }
+            else
+            {
+                bMoving = true;
             }
         }
-
-
-        //MOVE TO LINE
-        if(up)
-        {
-            transform.position = vMoveFromTo(transform.position, vPosGoal, speed, percentage,bDir,fDistance);
-            
-        }else if(middle)
-        {            
-            transform.position = vMoveFromTo(transform.position, vPosGoal, speed, percentage,bDir,fDistance);
-        }
-        else if(down)
-        {            
-            transform.position = vMoveFromTo(transform.position, vPosGoal, speed, percentage,bDir,fDistance);
-        }
-
-        //Check if it is at the goal position
-        if (transform.position == vPosGoal)
-        {
-            bMoving = false;
-        }
-        else
-        {
-            bMoving = true;
-        }
-
     }
 
     Vector3 vMoveFromTo(Vector3 v3PosInit, Vector3 v3PosFin, float fTime, float fPerc ,bool bDirection, float fDistance)
@@ -128,7 +131,7 @@ public class playerRun : MonoBehaviour {
         else
             vReturn = Vector3.Lerp(v3PosInit, v3PosFin, fTime); 
         */
-        return vReturn;
+        //return vReturn;
     }
 
     void OnTriggerEnter2D(Collider2D cOther)
@@ -137,12 +140,12 @@ public class playerRun : MonoBehaviour {
         {
             gLifeManagerBar.GetComponent<lifeManager>().addOrRestToLife(2);
             Destroy(cOther.gameObject);
-            Debug.Log("Aumenta vida");
+            //Debug.Log("Aumenta vida");
         }else
         {
             gLifeManagerBar.GetComponent<lifeManager>().addOrRestToLife(-2);
             Destroy(cOther.gameObject);
-            Debug.Log("Decrementa vida");
+            //Debug.Log("Decrementa vida");
         }
 
     }

@@ -11,35 +11,32 @@ public class lifeManager : MonoBehaviour {
 	void Awake()
     {
         fExtraSeconds = 0.0f;
-        fRealScondsSinceLoad = Time.realtimeSinceStartup;
+        fRealScondsSinceLoad = Time.time;
         fFill = 1;
 
     }
     
 	// Update is called once per frame
 	void LateUpdate () {
-        if(GetComponent<Image>().fillAmount > 0.0f)
+        if (Time.timeScale>0)
         {
-            fFill = (fLifeTimeSeconds - (Time.realtimeSinceStartup - fRealScondsSinceLoad) + fExtraSeconds) / fLifeTimeSeconds; //Calculate quantity of fillAmount
+            if (GetComponent<Image>().fillAmount > 0.0f)
+            {
+                fFill = (fLifeTimeSeconds - (Time.time - fRealScondsSinceLoad) + fExtraSeconds) / fLifeTimeSeconds; //Calculate quantity of fillAmount
 
-            if (fFill >= 1)
-                fFill = 1;
-            else if (fFill < 0)
-                fFill = 0;
-          
+                if (fFill >= 1)
+                    fFill = 1;
+                else if (fFill < 0)
+                    fFill = 0;
 
-            GetComponent<Image>().fillAmount = fFill;
-
-
-
-
-        }
-           
+                GetComponent<Image>().fillAmount = fFill;
+            }
+        }  
 	}
 
      public void addOrRestToLife(float fSeconds)
     {
-        if(fSeconds <= fLifeTimeSeconds && (fLifeTimeSeconds - (Time.realtimeSinceStartup - fRealScondsSinceLoad) + fExtraSeconds) /fLifeTimeSeconds <= 1.0f)
+        if(fSeconds <= fLifeTimeSeconds && (fLifeTimeSeconds - (Time.time - fRealScondsSinceLoad) + fExtraSeconds) /fLifeTimeSeconds <= 1.0f)
             fExtraSeconds += fSeconds;
 
     }

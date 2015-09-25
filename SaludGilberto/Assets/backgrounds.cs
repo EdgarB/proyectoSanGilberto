@@ -15,15 +15,21 @@ public class backgrounds : MonoBehaviour {
 
     void move()
     {
-        num = num % 2;
-        arrBackgrounds[num].transform.position = new Vector2(11.19f, -1.39f);
-        num++;
+        if (Time.timeScale>0)
+        {
+            num = num % 2;
+            arrBackgrounds[num].transform.position = new Vector2(11.19f, -1.39f);
+            num++;
+        }
     }
 
     void moveFloor()
     {
-        num2 = num2 % 2;
-        arrFloor[num2].transform.position = new Vector2(13.5f, 2.84f);
-        num2++;
+        if (Time.timeScale>0)
+        {
+            num2 = num2 % 2;
+            arrFloor[num2].transform.position = new Vector2(13.5f, 2.84f);
+            num2++;
+        }
     }
 }
