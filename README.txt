@@ -1,6 +1,5 @@
-
-Project made with the porpouse of making consciousnes about good and bad habits that influence people's health.
-The project was directed to the community of San Gilberto in Santa Catarina, Nuevo Leon, Mexico. 
+This project was developed to raise awareness about good and bad habits that could affect people's health.
+The project was done for the community of San Gilberto in Santa Catarina, Nuevo Leon, Mexico. 
 
 Music extracted from the youtube audio library.
 
