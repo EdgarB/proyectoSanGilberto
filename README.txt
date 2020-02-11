@@ -1,10 +1,10 @@
 This project was developed to raise awareness about good and bad habits that could affect people's health.
-The project was done for the community of San Gilberto in Santa Catarina, Nuevo Leon, Mexico. 
+The project was done for the community of San Gilberto in Santa Catarina, Nuevo León, México. 
 
-Music extracted from the youtube audio library.
+Music extracted from the YouTube Audio Library.
 
 Project made by:
-Luis Alfonso Rojo Sanchez
-Gerardo Andres Galvez Vallejo
-Andres Fernando Martinez Rangel
-Edgar Daniel Bustillos Rivera
+* Edgar Daniel Bustillos Rivera
+* Gerardo Andrés Gálvez Vallejo
+* Andrés Fernando Martínez Rangel
+* Luis Alfonso Rojo Sánchez
